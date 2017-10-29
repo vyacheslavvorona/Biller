@@ -7,48 +7,25 @@
 //
 
 import Foundation
-import ReactiveSwift
 import Result
 import RealmSwift
 
 public class BaseModel: Object {
     
-    @objc public dynamic var id: Int = 0
+    @objc public dynamic var id: String = ""
     @objc public dynamic var created: Date?
     @objc public dynamic var lastUpdated: Date?
     
-    // Int value of primary key for Realm Object
-    var primaryKeyIntValue: Int? {
-        if let keyName = type(of: self).primaryKey() {
-            if let v = self[keyName] {
-                return (v as! Int)
-            }
-        }
-        return nil
-    }
-    
-    // String value of primary key for Realm Object
-    var primaryKeyStringValue: String? {
-        if let keyName = type(of: self).primaryKey() {
-            if let v = self[keyName] {
-                return "\(v)"
-            }
-        }
-        return nil
-    }
-    
-    // Any value of primary key for Realm Object
-    var primaryKeyAnyValue: Any? {
-        if let keyName = type(of: self).primaryKey() {
-            if let v = self[keyName] {
-                return v
-            }
-        }
-        return nil
-    }
-    
     public override static func primaryKey() -> String? {
         return "id"
+    }
+
+    public override convenience init(value: Any) {
+        self.init(value: value)
+    }
+    
+    public func generateUuidString() -> String {
+        return UUID().uuidString
     }
 }
 

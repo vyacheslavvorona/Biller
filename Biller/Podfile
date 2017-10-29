@@ -6,8 +6,6 @@ target 'Biller' do
   use_frameworks!
 
   # Pods for Biller
-#  pod 'FutureKit'
-  pod 'ReactiveSwift', '~> 2.0'
   pod 'RealmSwift'
   pod 'SwiftLint'
   pod 'Result'

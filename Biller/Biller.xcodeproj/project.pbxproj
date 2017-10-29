@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031174C51FA5438E00D19AD0 /* BillPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C41FA5438E00D19AD0 /* BillPositionModel.swift */; };
+		031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C61FA5477D00D19AD0 /* CommentModel.swift */; };
+		031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C81FA54BB400D19AD0 /* PersonModel.swift */; };
+		031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */; };
+		031174CE1FA54D7300D19AD0 /* NavigationBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174CD1FA54D7300D19AD0 /* NavigationBarController.swift */; };
+		031174D01FA54DCA00D19AD0 /* NavigationBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174CF1FA54DCA00D19AD0 /* NavigationBar.storyboard */; };
+		031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D21FA54F2900D19AD0 /* HistoryViewController.swift */; };
+		031174D51FA54F4300D19AD0 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174D41FA54F4300D19AD0 /* History.storyboard */; };
+		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
 		036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D71CB1FA1401700C4832C /* AppDelegate.swift */; };
 		036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D11FA1401700C4832C /* TabBar.storyboard */; };
 		036D71D51FA1401700C4832C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D41FA1401700C4832C /* Assets.xcassets */; };
@@ -45,6 +54,15 @@
 
 /* Begin PBXFileReference section */
 		004C9C4874B08C7172382E73 /* Pods-BillerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BillerTests/Pods-BillerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		031174C41FA5438E00D19AD0 /* BillPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillPositionModel.swift; sourceTree = "<group>"; };
+		031174C61FA5477D00D19AD0 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		031174C81FA54BB400D19AD0 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
+		031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		031174CD1FA54D7300D19AD0 /* NavigationBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarController.swift; sourceTree = "<group>"; };
+		031174CF1FA54DCA00D19AD0 /* NavigationBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBar.storyboard; sourceTree = "<group>"; };
+		031174D21FA54F2900D19AD0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		031174D41FA54F4300D19AD0 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		036D71C81FA1401700C4832C /* Biller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036D71CB1FA1401700C4832C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036D71D21FA1401700C4832C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
@@ -103,6 +121,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		031174CC1FA54D3400D19AD0 /* NavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				031174CD1FA54D7300D19AD0 /* NavigationBarController.swift */,
+				031174CF1FA54DCA00D19AD0 /* NavigationBar.storyboard */,
+			);
+			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		031174D11FA54EF700D19AD0 /* HistoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				031174D21FA54F2900D19AD0 /* HistoryViewController.swift */,
+				031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */,
+				031174D41FA54F4300D19AD0 /* History.storyboard */,
+			);
+			path = HistoryScreen;
+			sourceTree = "<group>";
+		};
 		036D71BF1FA1401700C4832C = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +207,10 @@
 			children = (
 				0396FE601FA2200600ED2F13 /* BaseModel.swift */,
 				0396FE661FA23DA400ED2F13 /* BillModel.swift */,
+				031174C41FA5438E00D19AD0 /* BillPositionModel.swift */,
+				031174C61FA5477D00D19AD0 /* CommentModel.swift */,
+				031174C81FA54BB400D19AD0 /* PersonModel.swift */,
+				031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +218,8 @@
 		0396FE681FA24F3900ED2F13 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				031174D11FA54EF700D19AD0 /* HistoryScreen */,
+				031174CC1FA54D3400D19AD0 /* NavigationBar */,
 				0396FE721FA250AF00ED2F13 /* TabBar */,
 				0396FE691FA24FA500ED2F13 /* TestScreen */,
 			);
@@ -353,7 +396,9 @@
 				0396FE711FA2504400ED2F13 /* TestScreen.storyboard in Resources */,
 				036D71D81FA1401700C4832C /* LaunchScreen.storyboard in Resources */,
 				036D71D51FA1401700C4832C /* Assets.xcassets in Resources */,
+				031174D01FA54DCA00D19AD0 /* NavigationBar.storyboard in Resources */,
 				036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */,
+				031174D51FA54F4300D19AD0 /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,12 +580,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0396FE6B1FA24FF800ED2F13 /* TestScreenViewController.swift in Sources */,
+				031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */,
 				0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */,
+				031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */,
 				0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */,
+				031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */,
 				0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */,
 				036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */,
 				0396FE6F1FA2503000ED2F13 /* TestScreenViewModel.swift in Sources */,
 				03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */,
+				031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */,
+				031174CE1FA54D7300D19AD0 /* NavigationBarController.swift in Sources */,
+				031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */,
+				031174C51FA5438E00D19AD0 /* BillPositionModel.swift in Sources */,
 				0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

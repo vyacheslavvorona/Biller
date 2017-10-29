@@ -7,15 +7,40 @@
 //
 
 import Foundation
-import ReactiveSwift
 import Result
+import RealmSwift
 
 public protocol TestScreenViewModelProtocol {
     
 }
 
 public class TestScreenViewController: UIViewController {
-    private var viewModel: TestScreenViewModelProtocol = TestScreenViewModel()
+    private lazy var viewModel: TestScreenViewModelProtocol = TestScreenViewModel()
     
-    private var disposable = CompositeDisposable()
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        start()
+    }
+    
+    private func start() {
+        let bill = BillModel(name: "TestBill333")
+        do {
+            let realm = Realm.getRealm()
+            try realm.write {
+                let bill2 = try BillModel.create(realm: Realm.getRealm(), value: bill, update: true)
+                label.text = bill2.id
+            }
+        } catch {
+            print("oops, Skolvan... something went wrong")
+        }
+    }
+    
+    @IBAction func buttonTap(_ sender: Any) {
+        
+    }
+    
 }
