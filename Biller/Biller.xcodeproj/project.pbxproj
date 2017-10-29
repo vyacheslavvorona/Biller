@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031174C51FA5438E00D19AD0 /* BillPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C41FA5438E00D19AD0 /* BillPositionModel.swift */; };
+		031174C51FA5438E00D19AD0 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C41FA5438E00D19AD0 /* OrderModel.swift */; };
 		031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C61FA5477D00D19AD0 /* CommentModel.swift */; };
 		031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174C81FA54BB400D19AD0 /* PersonModel.swift */; };
 		031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */; };
@@ -16,6 +16,10 @@
 		031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D21FA54F2900D19AD0 /* HistoryViewController.swift */; };
 		031174D51FA54F4300D19AD0 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174D41FA54F4300D19AD0 /* History.storyboard */; };
 		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
+		032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5D1FA594A8006DD8DD /* DebtModel.swift */; };
+		032D0B601FA595CD006DD8DD /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */; };
+		032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */; };
+		032D0B641FA59B75006DD8DD /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B631FA59B75006DD8DD /* ConfigModel.swift */; };
 		036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D71CB1FA1401700C4832C /* AppDelegate.swift */; };
 		036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D11FA1401700C4832C /* TabBar.storyboard */; };
 		036D71D51FA1401700C4832C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D41FA1401700C4832C /* Assets.xcassets */; };
@@ -54,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		004C9C4874B08C7172382E73 /* Pods-BillerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BillerTests/Pods-BillerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		031174C41FA5438E00D19AD0 /* BillPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillPositionModel.swift; sourceTree = "<group>"; };
+		031174C41FA5438E00D19AD0 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		031174C61FA5477D00D19AD0 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		031174C81FA54BB400D19AD0 /* PersonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonModel.swift; sourceTree = "<group>"; };
 		031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -63,6 +67,10 @@
 		031174D21FA54F2900D19AD0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		031174D41FA54F4300D19AD0 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		032D0B5D1FA594A8006DD8DD /* DebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtModel.swift; sourceTree = "<group>"; };
+		032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
+		032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPositionModel.swift; sourceTree = "<group>"; };
+		032D0B631FA59B75006DD8DD /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
 		036D71C81FA1401700C4832C /* Biller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036D71CB1FA1401700C4832C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036D71D21FA1401700C4832C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
@@ -207,10 +215,13 @@
 			children = (
 				0396FE601FA2200600ED2F13 /* BaseModel.swift */,
 				0396FE661FA23DA400ED2F13 /* BillModel.swift */,
-				031174C41FA5438E00D19AD0 /* BillPositionModel.swift */,
+				031174C41FA5438E00D19AD0 /* OrderModel.swift */,
 				031174C61FA5477D00D19AD0 /* CommentModel.swift */,
 				031174C81FA54BB400D19AD0 /* PersonModel.swift */,
 				031174CA1FA54CAD00D19AD0 /* PlaceModel.swift */,
+				032D0B5D1FA594A8006DD8DD /* DebtModel.swift */,
+				032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */,
+				032D0B631FA59B75006DD8DD /* ConfigModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			children = (
 				03D3A5361FA2121200FE3947 /* RLMSupport.swift */,
 				0396FE621FA2374900ED2F13 /* Realm+Ext.swift */,
+				032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -583,17 +595,21 @@
 				031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */,
 				0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */,
 				031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */,
+				032D0B601FA595CD006DD8DD /* CurrencyProtocol.swift in Sources */,
 				0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */,
 				031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */,
 				0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */,
 				036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */,
 				0396FE6F1FA2503000ED2F13 /* TestScreenViewModel.swift in Sources */,
+				032D0B641FA59B75006DD8DD /* ConfigModel.swift in Sources */,
 				03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */,
+				032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */,
 				031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */,
 				031174CE1FA54D7300D19AD0 /* NavigationBarController.swift in Sources */,
 				031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */,
-				031174C51FA5438E00D19AD0 /* BillPositionModel.swift in Sources */,
+				031174C51FA5438E00D19AD0 /* OrderModel.swift in Sources */,
 				0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */,
+				032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

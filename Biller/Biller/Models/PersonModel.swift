@@ -18,9 +18,11 @@ public class PersonModel: BaseModel, BaseModelProtocol {
     
     @objc public dynamic var type: Int = 0
     @objc public dynamic var name: String = ""
-    @objc public dynamic var cardNumber: String = "" //needs encryption
+    @objc public dynamic var cardNumber: String = "" //needs encryption?
     @objc public dynamic var photo: NSData?
-    @objc public dynamic var debtSum: Float = 0
+    @objc public dynamic var defaultPhotoId: Int = 0
+    @objc public dynamic var isCurrentUser: Bool = false
+    @objc public dynamic var comment: CommentModel?
     
     public convenience init(name: String?) {
         self.init()
@@ -29,5 +31,6 @@ public class PersonModel: BaseModel, BaseModelProtocol {
         if let n = name {
             self.name = n
         }
+        self.defaultPhotoId = Int(arc4random_uniform(21))
     }
 }

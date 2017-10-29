@@ -18,8 +18,9 @@ public class BillModel: BaseModel, BaseModelProtocol {
     
     @objc public dynamic var type: Int = 0
     @objc public dynamic var name: String = ""
-    @objc public dynamic var totalSum: Float = 0
     @objc public dynamic var rating: Int = 0
+    @objc public dynamic var photo: NSData?
+    @objc public dynamic var tipsPercent: Float = 0
     
     public convenience init(name: String?) {
         self.init()
