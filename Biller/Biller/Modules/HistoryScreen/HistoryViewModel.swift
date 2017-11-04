@@ -10,11 +10,15 @@ import Foundation
 import RealmSwift
 import Result
 
+public protocol HistoryViewControllerProtocol {
+    var billDisplayItems: [BillDisplayItem] { get set }
+}
+
 public class HistoryViewModel: HistoryViewModelProtocol {
+    
+    public var viewController: HistoryViewControllerProtocol?
     
     public convenience init(name: String?) {
         self.init()
-        
     }
-    
 }

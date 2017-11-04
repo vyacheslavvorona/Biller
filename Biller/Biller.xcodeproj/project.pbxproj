@@ -16,10 +16,25 @@
 		031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D21FA54F2900D19AD0 /* HistoryViewController.swift */; };
 		031174D51FA54F4300D19AD0 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174D41FA54F4300D19AD0 /* History.storyboard */; };
 		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
+		032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC4171FADFAA400E7EF59 /* PlaceCell.swift */; };
+		032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032BC4191FADFAED00E7EF59 /* PlaceCell.xib */; };
 		032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5D1FA594A8006DD8DD /* DebtModel.swift */; };
 		032D0B601FA595CD006DD8DD /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */; };
 		032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */; };
 		032D0B641FA59B75006DD8DD /* ConfigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B631FA59B75006DD8DD /* ConfigModel.swift */; };
+		032D0B691FA5E058006DD8DD /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B681FA5E058006DD8DD /* FriendsViewController.swift */; };
+		032D0B6B1FA5E072006DD8DD /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B6A1FA5E072006DD8DD /* FriendsViewModel.swift */; };
+		032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032D0B6C1FA5E081006DD8DD /* Friends.storyboard */; };
+		032D0B701FA5E71A006DD8DD /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B6F1FA5E71A006DD8DD /* BillCell.swift */; };
+		032D0B721FA5E728006DD8DD /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032D0B711FA5E728006DD8DD /* BillCell.xib */; };
+		032D0B741FA5F61D006DD8DD /* TopAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */; };
+		03650FDA1FADED0500599F58 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03650FD91FADED0500599F58 /* PlacesViewController.swift */; };
+		03650FDC1FADED1400599F58 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03650FDB1FADED1400599F58 /* PlacesViewModel.swift */; };
+		03650FDE1FADED2300599F58 /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03650FDD1FADED2300599F58 /* Places.storyboard */; };
+		03650FE11FADF6BA00599F58 /* PlaceDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03650FE01FADF6BA00599F58 /* PlaceDisplayItem.swift */; };
+		036D3FC41FA5FB6C009BC78D /* AddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D3FC21FA5FB6C009BC78D /* AddCell.swift */; };
+		036D3FC51FA5FB6C009BC78D /* AddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 036D3FC31FA5FB6C009BC78D /* AddCell.xib */; };
+		036D3FC71FA6002E009BC78D /* BillDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D3FC61FA6002E009BC78D /* BillDisplayItem.swift */; };
 		036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D71CB1FA1401700C4832C /* AppDelegate.swift */; };
 		036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D11FA1401700C4832C /* TabBar.storyboard */; };
 		036D71D51FA1401700C4832C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D41FA1401700C4832C /* Assets.xcassets */; };
@@ -29,9 +44,6 @@
 		0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE601FA2200600ED2F13 /* BaseModel.swift */; };
 		0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE621FA2374900ED2F13 /* Realm+Ext.swift */; };
 		0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE661FA23DA400ED2F13 /* BillModel.swift */; };
-		0396FE6B1FA24FF800ED2F13 /* TestScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE6A1FA24FF800ED2F13 /* TestScreenViewController.swift */; };
-		0396FE6F1FA2503000ED2F13 /* TestScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE6E1FA2503000ED2F13 /* TestScreenViewModel.swift */; };
-		0396FE711FA2504400ED2F13 /* TestScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0396FE701FA2504400ED2F13 /* TestScreen.storyboard */; };
 		0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE731FA250CE00ED2F13 /* TabBarController.swift */; };
 		03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3A5361FA2121200FE3947 /* RLMSupport.swift */; };
 		8001A71419C33BCD0284556D /* Pods_BillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0CDE6AB5002EC65F7395 /* Pods_BillerTests.framework */; };
@@ -67,10 +79,25 @@
 		031174D21FA54F2900D19AD0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		031174D41FA54F4300D19AD0 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		032BC4171FADFAA400E7EF59 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		032BC4191FADFAED00E7EF59 /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		032D0B5D1FA594A8006DD8DD /* DebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtModel.swift; sourceTree = "<group>"; };
 		032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
 		032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPositionModel.swift; sourceTree = "<group>"; };
 		032D0B631FA59B75006DD8DD /* ConfigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigModel.swift; sourceTree = "<group>"; };
+		032D0B681FA5E058006DD8DD /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		032D0B6A1FA5E072006DD8DD /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		032D0B6C1FA5E081006DD8DD /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		032D0B6F1FA5E71A006DD8DD /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
+		032D0B711FA5E728006DD8DD /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
+		032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedLabel.swift; sourceTree = "<group>"; };
+		03650FD91FADED0500599F58 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
+		03650FDB1FADED1400599F58 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		03650FDD1FADED2300599F58 /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
+		03650FE01FADF6BA00599F58 /* PlaceDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDisplayItem.swift; sourceTree = "<group>"; };
+		036D3FC21FA5FB6C009BC78D /* AddCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCell.swift; sourceTree = "<group>"; };
+		036D3FC31FA5FB6C009BC78D /* AddCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddCell.xib; sourceTree = "<group>"; };
+		036D3FC61FA6002E009BC78D /* BillDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDisplayItem.swift; sourceTree = "<group>"; };
 		036D71C81FA1401700C4832C /* Biller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		036D71CB1FA1401700C4832C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		036D71D21FA1401700C4832C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
@@ -86,9 +113,6 @@
 		0396FE601FA2200600ED2F13 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		0396FE621FA2374900ED2F13 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		0396FE661FA23DA400ED2F13 /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
-		0396FE6A1FA24FF800ED2F13 /* TestScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewController.swift; sourceTree = "<group>"; };
-		0396FE6E1FA2503000ED2F13 /* TestScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreenViewModel.swift; sourceTree = "<group>"; };
-		0396FE701FA2504400ED2F13 /* TestScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestScreen.storyboard; sourceTree = "<group>"; };
 		0396FE731FA250CE00ED2F13 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		03D3A5361FA2121200FE3947 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		1D85FE0A2A76AF121B7AA833 /* Pods-Biller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Biller/Pods-Biller.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,11 +165,62 @@
 		031174D11FA54EF700D19AD0 /* HistoryScreen */ = {
 			isa = PBXGroup;
 			children = (
+				032D0B6E1FA5E6FC006DD8DD /* Cells */,
 				031174D21FA54F2900D19AD0 /* HistoryViewController.swift */,
 				031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */,
 				031174D41FA54F4300D19AD0 /* History.storyboard */,
 			);
 			path = HistoryScreen;
+			sourceTree = "<group>";
+		};
+		032D0B651FA5E00B006DD8DD /* FriendsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				032D0B681FA5E058006DD8DD /* FriendsViewController.swift */,
+				032D0B6A1FA5E072006DD8DD /* FriendsViewModel.swift */,
+				032D0B6C1FA5E081006DD8DD /* Friends.storyboard */,
+			);
+			path = FriendsScreen;
+			sourceTree = "<group>";
+		};
+		032D0B661FA5E02B006DD8DD /* PlacesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				03650FDF1FADF6A600599F58 /* Cells */,
+				03650FD91FADED0500599F58 /* PlacesViewController.swift */,
+				03650FDB1FADED1400599F58 /* PlacesViewModel.swift */,
+				03650FDD1FADED2300599F58 /* Places.storyboard */,
+			);
+			path = PlacesScreen;
+			sourceTree = "<group>";
+		};
+		032D0B671FA5E038006DD8DD /* SettingsScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsScreen;
+			sourceTree = "<group>";
+		};
+		032D0B6E1FA5E6FC006DD8DD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				036D3FC21FA5FB6C009BC78D /* AddCell.swift */,
+				036D3FC31FA5FB6C009BC78D /* AddCell.xib */,
+				032D0B6F1FA5E71A006DD8DD /* BillCell.swift */,
+				032D0B711FA5E728006DD8DD /* BillCell.xib */,
+				036D3FC61FA6002E009BC78D /* BillDisplayItem.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		03650FDF1FADF6A600599F58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03650FE01FADF6BA00599F58 /* PlaceDisplayItem.swift */,
+				032BC4171FADFAA400E7EF59 /* PlaceCell.swift */,
+				032BC4191FADFAED00E7EF59 /* PlaceCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		036D71BF1FA1401700C4832C = {
@@ -173,7 +248,7 @@
 		036D71CA1FA1401700C4832C /* Biller */ = {
 			isa = PBXGroup;
 			children = (
-				0396FE681FA24F3900ED2F13 /* MVVM */,
+				0396FE681FA24F3900ED2F13 /* Modules */,
 				0396FE5F1FA21FEE00ED2F13 /* Models */,
 				0396FE5E1FA21FCD00ED2F13 /* Common */,
 				03D3A5351FA211ED00FE3947 /* Utilities */,
@@ -226,25 +301,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		0396FE681FA24F3900ED2F13 /* MVVM */ = {
+		0396FE681FA24F3900ED2F13 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				032D0B671FA5E038006DD8DD /* SettingsScreen */,
+				032D0B661FA5E02B006DD8DD /* PlacesScreen */,
+				032D0B651FA5E00B006DD8DD /* FriendsScreen */,
 				031174D11FA54EF700D19AD0 /* HistoryScreen */,
 				031174CC1FA54D3400D19AD0 /* NavigationBar */,
 				0396FE721FA250AF00ED2F13 /* TabBar */,
-				0396FE691FA24FA500ED2F13 /* TestScreen */,
 			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		0396FE691FA24FA500ED2F13 /* TestScreen */ = {
-			isa = PBXGroup;
-			children = (
-				0396FE6A1FA24FF800ED2F13 /* TestScreenViewController.swift */,
-				0396FE6E1FA2503000ED2F13 /* TestScreenViewModel.swift */,
-				0396FE701FA2504400ED2F13 /* TestScreen.storyboard */,
-			);
-			path = TestScreen;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		0396FE721FA250AF00ED2F13 /* TabBar */ = {
@@ -262,6 +329,7 @@
 				03D3A5361FA2121200FE3947 /* RLMSupport.swift */,
 				0396FE621FA2374900ED2F13 /* Realm+Ext.swift */,
 				032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */,
+				032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -405,9 +473,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0396FE711FA2504400ED2F13 /* TestScreen.storyboard in Resources */,
+				032D0B721FA5E728006DD8DD /* BillCell.xib in Resources */,
+				036D3FC51FA5FB6C009BC78D /* AddCell.xib in Resources */,
+				032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */,
+				032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */,
 				036D71D81FA1401700C4832C /* LaunchScreen.storyboard in Resources */,
 				036D71D51FA1401700C4832C /* Assets.xcassets in Resources */,
+				03650FDE1FADED2300599F58 /* Places.storyboard in Resources */,
 				031174D01FA54DCA00D19AD0 /* NavigationBar.storyboard in Resources */,
 				036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */,
 				031174D51FA54F4300D19AD0 /* History.storyboard in Resources */,
@@ -453,14 +525,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Biller/Pods-Biller-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
@@ -591,25 +661,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0396FE6B1FA24FF800ED2F13 /* TestScreenViewController.swift in Sources */,
 				031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */,
 				0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */,
 				031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */,
+				032D0B701FA5E71A006DD8DD /* BillCell.swift in Sources */,
 				032D0B601FA595CD006DD8DD /* CurrencyProtocol.swift in Sources */,
 				0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */,
 				031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */,
+				032D0B741FA5F61D006DD8DD /* TopAlignedLabel.swift in Sources */,
+				036D3FC41FA5FB6C009BC78D /* AddCell.swift in Sources */,
+				03650FE11FADF6BA00599F58 /* PlaceDisplayItem.swift in Sources */,
 				0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */,
 				036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */,
-				0396FE6F1FA2503000ED2F13 /* TestScreenViewModel.swift in Sources */,
+				03650FDC1FADED1400599F58 /* PlacesViewModel.swift in Sources */,
 				032D0B641FA59B75006DD8DD /* ConfigModel.swift in Sources */,
+				032D0B6B1FA5E072006DD8DD /* FriendsViewModel.swift in Sources */,
 				03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */,
+				036D3FC71FA6002E009BC78D /* BillDisplayItem.swift in Sources */,
 				032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */,
 				031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */,
 				031174CE1FA54D7300D19AD0 /* NavigationBarController.swift in Sources */,
+				03650FDA1FADED0500599F58 /* PlacesViewController.swift in Sources */,
 				031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */,
+				032D0B691FA5E058006DD8DD /* FriendsViewController.swift in Sources */,
 				031174C51FA5438E00D19AD0 /* OrderModel.swift in Sources */,
 				0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */,
 				032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */,
+				032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

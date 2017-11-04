@@ -20,7 +20,15 @@ public enum CommentType: Int {
 
 public class CommentModel: BaseModel, BaseModelProtocol {
     
-    @objc public dynamic var type: Int = 0
+    @objc private dynamic var type: Int = 0
+    public var commentType: CommentType {
+        get {
+            return CommentType.init(rawValue: self.type) ?? .BASIC
+        }
+        set {
+            self.type = newValue.rawValue
+        }
+    }
     @objc public dynamic var text: String = ""
     @objc public dynamic var owner: BaseModel?
     

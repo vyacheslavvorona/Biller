@@ -17,7 +17,7 @@ public class ConfigModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var colorSchemeId: Int = 0
     @objc public dynamic var currentUser: PersonModel?
     
-    public convenience init() {
+    public convenience required init() {
         self.init()
         
     }

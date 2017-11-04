@@ -17,7 +17,7 @@ public class OrderModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var menuPosition: MenuPositionModel?
     @objc public dynamic var owner: PersonModel?
     
-    public convenience init() {
+    public convenience required init() {
         self.init()
 
     }

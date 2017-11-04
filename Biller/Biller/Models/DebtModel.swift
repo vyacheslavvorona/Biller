@@ -16,7 +16,7 @@ public enum DebtType: Int {
 
 public class DebtModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
     
-    @objc public dynamic var type: Int = 0
+    @objc private dynamic var type: Int = 0
     @objc public dynamic var sum: Float = 0
     @objc public dynamic var debter: PersonModel?
     @objc public dynamic var borrower: PersonModel?

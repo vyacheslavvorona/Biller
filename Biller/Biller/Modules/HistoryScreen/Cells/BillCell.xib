@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="160" id="x6u-h6-Bw1" customClass="BillCell" customModule="Biller" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x6u-h6-Bw1" id="HFz-dz-JFK">
+                <rect key="frame" x="0.0" y="0.0" width="517" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-NA-jl7">
+                        <rect key="frame" x="5" y="4.5" width="150" height="150.5"/>
+                        <color key="backgroundColor" red="1" green="0.42761688593791658" blue="0.32597938524817538" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="86K-kp-eIS"/>
+                            <constraint firstAttribute="width" constant="150" id="mP5-lN-kkG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v46-fu-40G">
+                        <rect key="frame" x="170" y="16.5" width="331" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDg-5c-Gtj">
+                        <rect key="frame" x="170" y="45.5" width="331" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5K-nk-CAD" customClass="TopAlignedLabel" customModule="Biller" customModuleProvider="target">
+                        <rect key="frame" x="170" y="74" width="274" height="77.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87W-yN-Y0i">
+                        <rect key="frame" x="459" y="109" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="U5h-NA-jl7" firstAttribute="leading" secondItem="HFz-dz-JFK" secondAttribute="leading" constant="5" id="0xC-8x-d1r"/>
+                    <constraint firstItem="Q5K-nk-CAD" firstAttribute="top" secondItem="CDg-5c-Gtj" secondAttribute="bottom" constant="7.5" id="3Xz-6K-ooP"/>
+                    <constraint firstItem="87W-yN-Y0i" firstAttribute="centerY" secondItem="U5h-NA-jl7" secondAttribute="centerY" multiplier="1.5" id="3l7-uV-IPT"/>
+                    <constraint firstAttribute="bottom" secondItem="Q5K-nk-CAD" secondAttribute="bottom" constant="8" id="6RX-wX-Nz0"/>
+                    <constraint firstItem="Q5K-nk-CAD" firstAttribute="leading" secondItem="CDg-5c-Gtj" secondAttribute="leading" id="6iM-WP-rpm"/>
+                    <constraint firstItem="CDg-5c-Gtj" firstAttribute="trailing" secondItem="v46-fu-40G" secondAttribute="trailing" id="85s-fR-J3s"/>
+                    <constraint firstItem="87W-yN-Y0i" firstAttribute="leading" secondItem="Q5K-nk-CAD" secondAttribute="trailing" constant="15" id="LR4-l8-jjK"/>
+                    <constraint firstItem="CDg-5c-Gtj" firstAttribute="leading" secondItem="v46-fu-40G" secondAttribute="leading" id="Lma-pN-AbI"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="v46-fu-40G" secondAttribute="trailing" constant="8" id="R5w-HZ-XA8"/>
+                    <constraint firstItem="v46-fu-40G" firstAttribute="leading" secondItem="U5h-NA-jl7" secondAttribute="trailing" constant="15" id="Yns-K2-9vB"/>
+                    <constraint firstItem="v46-fu-40G" firstAttribute="top" secondItem="HFz-dz-JFK" secondAttribute="topMargin" constant="8" id="Yz3-0c-bgv"/>
+                    <constraint firstItem="87W-yN-Y0i" firstAttribute="trailing" secondItem="CDg-5c-Gtj" secondAttribute="trailing" id="dU9-gb-kPn"/>
+                    <constraint firstItem="CDg-5c-Gtj" firstAttribute="top" secondItem="v46-fu-40G" secondAttribute="bottom" constant="8" id="lAj-cR-0G8"/>
+                    <constraint firstItem="U5h-NA-jl7" firstAttribute="centerY" secondItem="HFz-dz-JFK" secondAttribute="centerY" id="vsm-oE-mxb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="CDg-5c-Gtj" id="8zB-DR-u0i"/>
+                <outlet property="noteLabel" destination="Q5K-nk-CAD" id="Pb6-Ob-Hfs"/>
+                <outlet property="sumLabel" destination="87W-yN-Y0i" id="aTz-3H-HfK"/>
+                <outlet property="titleLabel" destination="v46-fu-40G" id="KhO-xh-QaV"/>
+            </connections>
+            <point key="canvasLocation" x="-31.5" y="-147"/>
+        </tableViewCell>
+    </objects>
+</document>

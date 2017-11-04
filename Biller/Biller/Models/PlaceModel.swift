@@ -16,7 +16,7 @@ public enum PlaceType: Int {
 
 public class PlaceModel: BaseModel, BaseModelProtocol {
     
-    @objc public dynamic var type: Int = 0
+    @objc private dynamic var type: Int = 0
     @objc public dynamic var name: String = ""
     @objc public dynamic var rating: Int = 0
     @objc public dynamic var photo: NSData?

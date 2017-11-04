@@ -12,16 +12,26 @@ import RealmSwift
 
 public enum MenuPositionType: Int {
     case BASIC = 0
+    case DRINK = 1
+    case FOOD = 2
 }
 
 public class MenuPositionModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
     
-    @objc public dynamic var type: Int = 0
+    @objc private dynamic var type: Int = 0
+    public var positionType: MenuPositionType {
+        get {
+            return MenuPositionType.init(rawValue: self.type) ?? .BASIC
+        }
+        set {
+            self.type = newValue.rawValue
+        }
+    }
     @objc public dynamic var name: String = ""
     @objc public dynamic var cost: Float = 0
     @objc public dynamic var positionDescription: String = ""
     @objc public dynamic var rating: Int = 0
-    @objc public dynamic var currencyCode: String?
+    @objc public dynamic var currencyCode: String = ""
     @objc public dynamic var photo: NSData?
     @objc public dynamic var place: PlaceModel?
     

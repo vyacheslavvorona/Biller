@@ -16,7 +16,7 @@ public enum PersonType: Int {
 
 public class PersonModel: BaseModel, BaseModelProtocol {
     
-    @objc public dynamic var type: Int = 0
+    @objc private dynamic var type: Int = 0
     @objc public dynamic var name: String = ""
     @objc public dynamic var cardNumber: String = "" //needs encryption?
     @objc public dynamic var photo: NSData?

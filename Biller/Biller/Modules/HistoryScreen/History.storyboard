@@ -17,24 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey Skolvan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGu-V7-83I">
-                                <rect key="frame" x="140" y="323" width="95" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-lI-qW9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aGu-V7-83I" firstAttribute="centerY" secondItem="9Bg-gN-pYx" secondAttribute="centerY" id="H9U-RX-ofc"/>
-                            <constraint firstItem="aGu-V7-83I" firstAttribute="centerX" secondItem="9Bg-gN-pYx" secondAttribute="centerX" id="x1U-vH-yZN"/>
+                            <constraint firstItem="l1i-lI-qW9" firstAttribute="top" secondItem="9Bg-gN-pYx" secondAttribute="top" id="Izh-Hf-txV"/>
+                            <constraint firstItem="l1i-lI-qW9" firstAttribute="trailing" secondItem="pzY-5Z-hVW" secondAttribute="trailing" id="UHg-FW-ccH"/>
+                            <constraint firstItem="l1i-lI-qW9" firstAttribute="leading" secondItem="pzY-5Z-hVW" secondAttribute="leading" id="v6Z-zw-p3u"/>
+                            <constraint firstItem="l1i-lI-qW9" firstAttribute="bottom" secondItem="pzY-5Z-hVW" secondAttribute="bottom" id="ytX-n9-KQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pzY-5Z-hVW"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="l1i-lI-qW9" id="HwK-Vq-bZb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MR-1l-iDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="302"/>
+            <point key="canvasLocation" x="248.80000000000001" y="301.79910044977515"/>
         </scene>
     </scenes>
 </document>

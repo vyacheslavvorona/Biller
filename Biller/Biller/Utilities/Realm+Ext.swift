@@ -8,7 +8,6 @@
 
 import Foundation
 import RealmSwift
-import ReactiveSwift
 
 public extension Realm {
     

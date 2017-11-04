@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="EhG-lH-EGf" customClass="AddCell" customModule="Biller" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EhG-lH-EGf" id="x2f-ya-245">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHe-EG-6f2">
+                        <rect key="frame" x="8" y="11" width="328" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nER-pK-8x9">
+                        <rect key="frame" x="356" y="11" width="11" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="VHe-EG-6f2" firstAttribute="leading" secondItem="x2f-ya-245" secondAttribute="leading" constant="8" id="45d-aj-kAa"/>
+                    <constraint firstAttribute="bottom" secondItem="VHe-EG-6f2" secondAttribute="bottom" constant="11.5" id="5yx-ap-nHU"/>
+                    <constraint firstAttribute="bottom" secondItem="nER-pK-8x9" secondAttribute="bottom" constant="11.5" id="HGn-XA-4CM"/>
+                    <constraint firstItem="nER-pK-8x9" firstAttribute="top" secondItem="x2f-ya-245" secondAttribute="top" constant="11" id="a51-bu-sIs"/>
+                    <constraint firstItem="nER-pK-8x9" firstAttribute="leading" secondItem="VHe-EG-6f2" secondAttribute="trailing" constant="20" id="cTd-rC-jxl"/>
+                    <constraint firstItem="VHe-EG-6f2" firstAttribute="top" secondItem="x2f-ya-245" secondAttribute="top" constant="11" id="dag-0M-95S"/>
+                    <constraint firstAttribute="trailing" secondItem="nER-pK-8x9" secondAttribute="trailing" constant="8" id="hEn-iw-eip"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="addLabel" destination="VHe-EG-6f2" id="q44-2H-Bf5"/>
+                <outlet property="plusLabel" destination="nER-pK-8x9" id="hds-BY-gSj"/>
+            </connections>
+            <point key="canvasLocation" x="14.5" y="-40"/>
+        </tableViewCell>
+    </objects>
+</document>
