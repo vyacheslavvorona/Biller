@@ -24,9 +24,10 @@ public class PersonModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var isCurrentUser: Bool = false
     @objc public dynamic var comment: CommentModel?
     
-    public convenience init(name: String?) {
+    public convenience init(type: PersonType, name: String?) {
         self.init()
-        self.id = self.generateUuidString()
+        self.id = generateUuidString()
+        self.type = type.rawValue
         
         if let n = name {
             self.name = n

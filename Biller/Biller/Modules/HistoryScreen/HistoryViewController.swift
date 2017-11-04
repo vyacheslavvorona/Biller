@@ -15,9 +15,9 @@ public protocol HistoryViewModelProtocol {
 }
 
 public class HistoryViewController: UIViewController, HistoryViewControllerProtocol {
-    private var viewModel: HistoryViewModelProtocol = HistoryViewModel() {
+    private var viewModel: HistoryViewModelProtocol? {
         didSet {
-            viewModel.viewController = self
+            viewModel?.viewController = self
         }
     }
     public var billDisplayItems: [BillDisplayItem] = []
@@ -35,6 +35,7 @@ public class HistoryViewController: UIViewController, HistoryViewControllerProto
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = HistoryViewModel()
     }
 }
 

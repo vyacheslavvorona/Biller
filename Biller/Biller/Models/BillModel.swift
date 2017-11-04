@@ -22,12 +22,9 @@ public class BillModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var photo: NSData?
     @objc public dynamic var tipsPercent: Float = 0
     
-    public convenience init(name: String?) {
+    public convenience init(type: BillType) {
         self.init()
-        self.id = self.generateUuidString()
-        
-        if let n = name {
-            self.name = n
-        }
+        self.id = generateUuidString()
+        self.type = type.rawValue
     }
 }

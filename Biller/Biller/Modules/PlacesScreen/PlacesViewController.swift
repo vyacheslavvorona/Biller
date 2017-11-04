@@ -12,13 +12,14 @@ import RealmSwift
 
 public protocol PlacesViewModelProtocol {
     var viewController: PlacesViewControllerProtocol? { get set }
-
+    
+    func createPlaceRequested()
 }
 
 public class PlacesViewController: UIViewController, PlacesViewControllerProtocol {
-    private var viewModel: PlacesViewModelProtocol = PlacesViewModel() {
+    private var viewModel: PlacesViewModelProtocol? {
         didSet {
-            viewModel.viewController = self
+            viewModel?.viewController = self
         }
     }
     public var placesDisplayItems: [PlaceDisplayItem] = []
@@ -33,10 +34,25 @@ public class PlacesViewController: UIViewController, PlacesViewControllerProtoco
         }
     }
     
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        viewModel = PlacesViewModel()
+    }
+    
+    public func moveToViewController(viewController: UIViewController) {
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension PlacesViewController: UITableViewDelegate {
-    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row >= placesDisplayItems.count {
+            viewModel?.createPlaceRequested()
+        } else {
+            print("skolvan missed")
+        }
+    }
 }
 
 extension PlacesViewController: UITableViewDataSource {

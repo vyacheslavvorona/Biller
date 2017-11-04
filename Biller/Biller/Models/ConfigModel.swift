@@ -17,8 +17,12 @@ public class ConfigModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var colorSchemeId: Int = 0
     @objc public dynamic var currentUser: PersonModel?
     
-    public convenience required init() {
+    public convenience init(user: PersonModel?) {
         self.init()
-        
+        self.id = generateUuidString()
+
+        if let u = user {
+            currentUser = u
+        }
     }
 }

@@ -32,10 +32,11 @@ public class CommentModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var text: String = ""
     @objc public dynamic var owner: BaseModel?
     
-    public convenience init(text: String?) {
+    public convenience init(type: CommentType, text: String?) {
         self.init()
-        self.id = self.generateUuidString()
-        
+        self.id = generateUuidString()
+        self.type = type.rawValue
+
         if let t = text {
             self.text = t
         }

@@ -18,6 +18,9 @@
 		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
 		032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC4171FADFAA400E7EF59 /* PlaceCell.swift */; };
 		032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032BC4191FADFAED00E7EF59 /* PlaceCell.xib */; };
+		032BC41D1FADFFBE00E7EF59 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */; };
+		032BC41F1FADFFCA00E7EF59 /* Place.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032BC41E1FADFFCA00E7EF59 /* Place.storyboard */; };
+		032BC4211FAE006F00E7EF59 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC4201FAE006F00E7EF59 /* PlaceViewModel.swift */; };
 		032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5D1FA594A8006DD8DD /* DebtModel.swift */; };
 		032D0B601FA595CD006DD8DD /* CurrencyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */; };
 		032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */; };
@@ -26,8 +29,8 @@
 		032D0B6B1FA5E072006DD8DD /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B6A1FA5E072006DD8DD /* FriendsViewModel.swift */; };
 		032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 032D0B6C1FA5E081006DD8DD /* Friends.storyboard */; };
 		032D0B701FA5E71A006DD8DD /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B6F1FA5E71A006DD8DD /* BillCell.swift */; };
-		032D0B721FA5E728006DD8DD /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032D0B711FA5E728006DD8DD /* BillCell.xib */; };
 		032D0B741FA5F61D006DD8DD /* TopAlignedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */; };
+		034C1DF01FAE192300A0928F /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034C1DEF1FAE192300A0928F /* BillCell.xib */; };
 		03650FDA1FADED0500599F58 /* PlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03650FD91FADED0500599F58 /* PlacesViewController.swift */; };
 		03650FDC1FADED1400599F58 /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03650FDB1FADED1400599F58 /* PlacesViewModel.swift */; };
 		03650FDE1FADED2300599F58 /* Places.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03650FDD1FADED2300599F58 /* Places.storyboard */; };
@@ -81,6 +84,9 @@
 		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		032BC4171FADFAA400E7EF59 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		032BC4191FADFAED00E7EF59 /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		032BC41E1FADFFCA00E7EF59 /* Place.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Place.storyboard; sourceTree = "<group>"; };
+		032BC4201FAE006F00E7EF59 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		032D0B5D1FA594A8006DD8DD /* DebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtModel.swift; sourceTree = "<group>"; };
 		032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyProtocol.swift; sourceTree = "<group>"; };
 		032D0B611FA598CB006DD8DD /* MenuPositionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPositionModel.swift; sourceTree = "<group>"; };
@@ -89,8 +95,8 @@
 		032D0B6A1FA5E072006DD8DD /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 		032D0B6C1FA5E081006DD8DD /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		032D0B6F1FA5E71A006DD8DD /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
-		032D0B711FA5E728006DD8DD /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAlignedLabel.swift; sourceTree = "<group>"; };
+		034C1DEF1FAE192300A0928F /* BillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		03650FD91FADED0500599F58 /* PlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewController.swift; sourceTree = "<group>"; };
 		03650FDB1FADED1400599F58 /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
 		03650FDD1FADED2300599F58 /* Places.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Places.storyboard; sourceTree = "<group>"; };
@@ -173,6 +179,16 @@
 			path = HistoryScreen;
 			sourceTree = "<group>";
 		};
+		032BC41B1FADFF6D00E7EF59 /* PlaceScreen */ = {
+			isa = PBXGroup;
+			children = (
+				032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */,
+				032BC4201FAE006F00E7EF59 /* PlaceViewModel.swift */,
+				032BC41E1FADFFCA00E7EF59 /* Place.storyboard */,
+			);
+			path = PlaceScreen;
+			sourceTree = "<group>";
+		};
 		032D0B651FA5E00B006DD8DD /* FriendsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +202,7 @@
 		032D0B661FA5E02B006DD8DD /* PlacesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				032BC41B1FADFF6D00E7EF59 /* PlaceScreen */,
 				03650FDF1FADF6A600599F58 /* Cells */,
 				03650FD91FADED0500599F58 /* PlacesViewController.swift */,
 				03650FDB1FADED1400599F58 /* PlacesViewModel.swift */,
@@ -207,7 +224,7 @@
 				036D3FC21FA5FB6C009BC78D /* AddCell.swift */,
 				036D3FC31FA5FB6C009BC78D /* AddCell.xib */,
 				032D0B6F1FA5E71A006DD8DD /* BillCell.swift */,
-				032D0B711FA5E728006DD8DD /* BillCell.xib */,
+				034C1DEF1FAE192300A0928F /* BillCell.xib */,
 				036D3FC61FA6002E009BC78D /* BillDisplayItem.swift */,
 			);
 			path = Cells;
@@ -473,11 +490,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				032D0B721FA5E728006DD8DD /* BillCell.xib in Resources */,
 				036D3FC51FA5FB6C009BC78D /* AddCell.xib in Resources */,
 				032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */,
+				032BC41F1FADFFCA00E7EF59 /* Place.storyboard in Resources */,
 				032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */,
 				036D71D81FA1401700C4832C /* LaunchScreen.storyboard in Resources */,
+				034C1DF01FAE192300A0928F /* BillCell.xib in Resources */,
 				036D71D51FA1401700C4832C /* Assets.xcassets in Resources */,
 				03650FDE1FADED2300599F58 /* Places.storyboard in Resources */,
 				031174D01FA54DCA00D19AD0 /* NavigationBar.storyboard in Resources */,
@@ -662,6 +680,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				031174CB1FA54CAD00D19AD0 /* PlaceModel.swift in Sources */,
+				032BC4211FAE006F00E7EF59 /* PlaceViewModel.swift in Sources */,
 				0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */,
 				031174C91FA54BB400D19AD0 /* PersonModel.swift in Sources */,
 				032D0B701FA5E71A006DD8DD /* BillCell.swift in Sources */,
@@ -685,6 +704,7 @@
 				031174C71FA5477D00D19AD0 /* CommentModel.swift in Sources */,
 				032D0B691FA5E058006DD8DD /* FriendsViewController.swift in Sources */,
 				031174C51FA5438E00D19AD0 /* OrderModel.swift in Sources */,
+				032BC41D1FADFFBE00E7EF59 /* PlaceViewController.swift in Sources */,
 				0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */,
 				032D0B621FA598CB006DD8DD /* MenuPositionModel.swift in Sources */,
 				032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */,

@@ -22,9 +22,10 @@ public class DebtModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
     @objc public dynamic var borrower: PersonModel?
     @objc public dynamic var currencyCode: String = ""
     
-    public convenience init(debterId: String, borrowerId: String, sum: Float) {
+    public convenience init(type: DebtType, debterId: String, borrowerId: String, sum: Float) {
         self.init()
-
+        self.id = generateUuidString()
+        self.type = type.rawValue
     }
 }
 

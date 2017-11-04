@@ -22,6 +22,7 @@ public class BaseModel: Object {
 
     public override convenience init(value: Any) {
         self.init(value: value)
+        self.id = generateUuidString()
     }
     
     public func generateUuidString() -> String {

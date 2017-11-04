@@ -35,9 +35,10 @@ public class MenuPositionModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
     @objc public dynamic var photo: NSData?
     @objc public dynamic var place: PlaceModel?
     
-    public convenience init(name: String?) {
+    public convenience init(type: MenuPositionType, name: String?) {
         self.init()
-        self.id = self.generateUuidString()
+        self.id = generateUuidString()
+        self.type = type.rawValue
         
         if let n = name {
             self.name = n

@@ -17,17 +17,15 @@ public enum PlaceType: Int {
 public class PlaceModel: BaseModel, BaseModelProtocol {
     
     @objc private dynamic var type: Int = 0
-    @objc public dynamic var name: String = ""
+    @objc public dynamic var name: String = "Yet another place"
     @objc public dynamic var rating: Int = 0
     @objc public dynamic var photo: NSData?
     @objc public dynamic var comment: CommentModel?
     
-    public convenience init(name: String?) {
+    public convenience init(type: PlaceType) {
         self.init()
-        self.id = self.generateUuidString()
-        
-        if let n = name {
-            self.name = n
-        }
+        self.id = generateUuidString()
+        self.type = type.rawValue
+
     }
 }
