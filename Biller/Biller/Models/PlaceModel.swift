@@ -20,6 +20,7 @@ public class PlaceModel: BaseModel, BaseModelProtocol {
     @objc public dynamic var name: String = "Yet another place"
     @objc public dynamic var rating: Int = 0
     @objc public dynamic var photo: NSData?
+    @objc public dynamic var photoPreview: NSData?
     @objc public dynamic var comment: CommentModel?
     
     public convenience init(type: PlaceType) {

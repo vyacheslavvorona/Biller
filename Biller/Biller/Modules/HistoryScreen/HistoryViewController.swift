@@ -11,16 +11,20 @@ import Result
 import RealmSwift
 
 public protocol HistoryViewModelProtocol: class {
-    var viewController: HistoryViewControllerProtocol? { get set }
+    func setViewController(_ viewController: HistoryViewControllerProtocol)
 }
 
 public class HistoryViewController: UIViewController, HistoryViewControllerProtocol {
     private var viewModel: HistoryViewModelProtocol? {
         didSet {
-            viewModel?.viewController = self
+            viewModel?.setViewController(self)
         }
     }
-    public var billDisplayItems: [BillDisplayItem] = []
+    public var billDisplayItems: [BillDisplayItem] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -36,6 +40,10 @@ public class HistoryViewController: UIViewController, HistoryViewControllerProto
         super.viewDidLoad()
         
         viewModel = HistoryViewModel()
+    }
+
+    public func setDisplayItems(_ items: [BillDisplayItem]) {
+        billDisplayItems = items
     }
 }
 

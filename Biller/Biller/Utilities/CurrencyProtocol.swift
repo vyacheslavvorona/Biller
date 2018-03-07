@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol CurrencyProtocol {
-    var currencyCode: String { get set }
+
 }
 
 public extension CurrencyProtocol {

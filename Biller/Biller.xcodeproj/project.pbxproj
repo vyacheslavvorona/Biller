@@ -17,6 +17,8 @@
 		031174D51FA54F4300D19AD0 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174D41FA54F4300D19AD0 /* History.storyboard */; };
 		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
 		0328282A205073460030FEDE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03282829205073460030FEDE /* Utilities.swift */; };
+		0328282F20508DB70030FEDE /* PlaceTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0328282E20508DB70030FEDE /* PlaceTitleCell.xib */; };
+		0328283120508DCA0030FEDE /* PlaceTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328283020508DCA0030FEDE /* PlaceTitleCell.swift */; };
 		032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC4171FADFAA400E7EF59 /* PlaceCell.swift */; };
 		032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032BC4191FADFAED00E7EF59 /* PlaceCell.xib */; };
 		032BC41D1FADFFBE00E7EF59 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */; };
@@ -45,10 +47,14 @@
 		036D71D81FA1401700C4832C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036D71D61FA1401700C4832C /* LaunchScreen.storyboard */; };
 		036D71E31FA1401700C4832C /* BillerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D71E21FA1401700C4832C /* BillerTests.swift */; };
 		036D71EE1FA1401700C4832C /* BillerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036D71ED1FA1401700C4832C /* BillerUITests.swift */; };
+		037E41B420509DD000F12BD1 /* RatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 037E41B320509DD000F12BD1 /* RatingCell.xib */; };
+		037E41B620509DE000F12BD1 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037E41B520509DE000F12BD1 /* RatingCell.swift */; };
 		0396FE611FA2200600ED2F13 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE601FA2200600ED2F13 /* BaseModel.swift */; };
 		0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE621FA2374900ED2F13 /* Realm+Ext.swift */; };
 		0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE661FA23DA400ED2F13 /* BillModel.swift */; };
 		0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE731FA250CE00ED2F13 /* TabBarController.swift */; };
+		03C5A3952050A301003301D4 /* GoToCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5A3942050A301003301D4 /* GoToCell.swift */; };
+		03C5A3972050A30F003301D4 /* GoToCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C5A3962050A30F003301D4 /* GoToCell.xib */; };
 		03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3A5361FA2121200FE3947 /* RLMSupport.swift */; };
 		8001A71419C33BCD0284556D /* Pods_BillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8D0CDE6AB5002EC65F7395 /* Pods_BillerTests.framework */; };
 		CB0FC14C80EF1D8E525589BF /* Pods_Biller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BD354E1F21083D8A847BC35 /* Pods_Biller.framework */; };
@@ -84,6 +90,8 @@
 		031174D41FA54F4300D19AD0 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		03282829205073460030FEDE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		0328282E20508DB70030FEDE /* PlaceTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTitleCell.xib; sourceTree = "<group>"; };
+		0328283020508DCA0030FEDE /* PlaceTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTitleCell.swift; sourceTree = "<group>"; };
 		032BC4171FADFAA400E7EF59 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		032BC4191FADFAED00E7EF59 /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
@@ -118,10 +126,14 @@
 		036D71E91FA1401700C4832C /* BillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		036D71ED1FA1401700C4832C /* BillerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillerUITests.swift; sourceTree = "<group>"; };
 		036D71EF1FA1401700C4832C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037E41B320509DD000F12BD1 /* RatingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingCell.xib; sourceTree = "<group>"; };
+		037E41B520509DE000F12BD1 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
 		0396FE601FA2200600ED2F13 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		0396FE621FA2374900ED2F13 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		0396FE661FA23DA400ED2F13 /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
 		0396FE731FA250CE00ED2F13 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		03C5A3942050A301003301D4 /* GoToCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToCell.swift; sourceTree = "<group>"; };
+		03C5A3962050A30F003301D4 /* GoToCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoToCell.xib; sourceTree = "<group>"; };
 		03D3A5361FA2121200FE3947 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		1D85FE0A2A76AF121B7AA833 /* Pods-Biller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Biller.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Biller/Pods-Biller.debug.xcconfig"; sourceTree = "<group>"; };
 		2A591E721F9FDB7E580EDDBA /* Pods-BillerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BillerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BillerUITests/Pods-BillerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,9 +193,32 @@
 			path = HistoryScreen;
 			sourceTree = "<group>";
 		};
+		0328282C205085580030FEDE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0328282E20508DB70030FEDE /* PlaceTitleCell.xib */,
+				0328283020508DCA0030FEDE /* PlaceTitleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0328282D20508A6B0030FEDE /* ReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+				036D3FC21FA5FB6C009BC78D /* AddCell.swift */,
+				036D3FC31FA5FB6C009BC78D /* AddCell.xib */,
+				037E41B520509DE000F12BD1 /* RatingCell.swift */,
+				037E41B320509DD000F12BD1 /* RatingCell.xib */,
+				03C5A3942050A301003301D4 /* GoToCell.swift */,
+				03C5A3962050A30F003301D4 /* GoToCell.xib */,
+			);
+			path = ReusableCells;
+			sourceTree = "<group>";
+		};
 		032BC41B1FADFF6D00E7EF59 /* PlaceScreen */ = {
 			isa = PBXGroup;
 			children = (
+				0328282C205085580030FEDE /* Cells */,
 				032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */,
 				032BC4201FAE006F00E7EF59 /* PlaceViewModel.swift */,
 				032BC41E1FADFFCA00E7EF59 /* Place.storyboard */,
@@ -223,8 +258,6 @@
 		032D0B6E1FA5E6FC006DD8DD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				036D3FC21FA5FB6C009BC78D /* AddCell.swift */,
-				036D3FC31FA5FB6C009BC78D /* AddCell.xib */,
 				032D0B6F1FA5E71A006DD8DD /* BillCell.swift */,
 				034C1DEF1FAE192300A0928F /* BillCell.xib */,
 				036D3FC61FA6002E009BC78D /* BillDisplayItem.swift */,
@@ -323,6 +356,7 @@
 		0396FE681FA24F3900ED2F13 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0328282D20508A6B0030FEDE /* ReusableCells */,
 				032D0B671FA5E038006DD8DD /* SettingsScreen */,
 				032D0B661FA5E02B006DD8DD /* PlacesScreen */,
 				032D0B651FA5E00B006DD8DD /* FriendsScreen */,
@@ -495,11 +529,14 @@
 			files = (
 				036D3FC51FA5FB6C009BC78D /* AddCell.xib in Resources */,
 				032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */,
+				03C5A3972050A30F003301D4 /* GoToCell.xib in Resources */,
+				0328282F20508DB70030FEDE /* PlaceTitleCell.xib in Resources */,
 				032BC41F1FADFFCA00E7EF59 /* Place.storyboard in Resources */,
 				032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */,
 				036D71D81FA1401700C4832C /* LaunchScreen.storyboard in Resources */,
 				034C1DF01FAE192300A0928F /* BillCell.xib in Resources */,
 				036D71D51FA1401700C4832C /* Assets.xcassets in Resources */,
+				037E41B420509DD000F12BD1 /* RatingCell.xib in Resources */,
 				03650FDE1FADED2300599F58 /* Places.storyboard in Resources */,
 				031174D01FA54DCA00D19AD0 /* NavigationBar.storyboard in Resources */,
 				036D71D31FA1401700C4832C /* TabBar.storyboard in Resources */,
@@ -696,7 +733,10 @@
 				0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */,
 				036D71CC1FA1401700C4832C /* AppDelegate.swift in Sources */,
 				03650FDC1FADED1400599F58 /* PlacesViewModel.swift in Sources */,
+				03C5A3952050A301003301D4 /* GoToCell.swift in Sources */,
+				0328283120508DCA0030FEDE /* PlaceTitleCell.swift in Sources */,
 				032D0B641FA59B75006DD8DD /* ConfigModel.swift in Sources */,
+				037E41B620509DE000F12BD1 /* RatingCell.swift in Sources */,
 				032D0B6B1FA5E072006DD8DD /* FriendsViewModel.swift in Sources */,
 				03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */,
 				036D3FC71FA6002E009BC78D /* BillDisplayItem.swift in Sources */,

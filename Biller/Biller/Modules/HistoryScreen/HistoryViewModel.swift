@@ -11,14 +11,18 @@ import RealmSwift
 import Result
 
 public protocol HistoryViewControllerProtocol: class {
-    var billDisplayItems: [BillDisplayItem] { get set }
+    func setDisplayItems(_ items: [BillDisplayItem])
 }
 
 public class HistoryViewModel: HistoryViewModelProtocol {
     
-    public weak var viewController: HistoryViewControllerProtocol?
+    private weak var viewController: HistoryViewControllerProtocol?
     
     public convenience init(name: String?) {
         self.init()
+    }
+
+    public func setViewController(_ viewController: HistoryViewControllerProtocol) {
+        self.viewController = viewController
     }
 }

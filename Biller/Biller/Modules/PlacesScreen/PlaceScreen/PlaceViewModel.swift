@@ -14,11 +14,19 @@ public protocol PlaceViewControllerProtocol: class {
 }
 
 public protocol PlaceViewModelInputProtocol {
-    var placeModel: PlaceModel? { get set }
+    func setPlaceModel(_ place: PlaceModel)
 }
 
 public class PlaceViewModel: PlaceViewModelProtocol, PlaceViewModelInputProtocol {
     
-    public weak var viewController: PlaceViewControllerProtocol?
-    public var placeModel: PlaceModel?
+    private weak var viewController: PlaceViewControllerProtocol?
+
+    public func setViewController(_ viewController: PlaceViewControllerProtocol) {
+        self.viewController = viewController
+    }
+
+    private var placeModel: PlaceModel?
+    public func setPlaceModel(_ place: PlaceModel) {
+        placeModel = place
+    }
 }

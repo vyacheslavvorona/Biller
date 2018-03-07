@@ -11,30 +11,38 @@ import Result
 import RealmSwift
 
 public protocol PlacesViewModelProtocol: class {
-    var viewController: PlacesViewControllerProtocol? { get set }
-
+    func setViewController(_ viewController: PlacesViewControllerProtocol)
     func displayItemsRequested()
     func createPlaceRequested()
     func showPlaceRequested(_ placeId: String)
+}
+
+fileprivate struct CellIdentifiers {
+    static let placeCell = "PlaceCell"
+    static let addCell = "AddCell"
 }
 
 public class PlacesViewController: UIViewController, PlacesViewControllerProtocol {
 
     private var viewModel: PlacesViewModelProtocol? {
         didSet {
-            viewModel?.viewController = self
+            viewModel?.setViewController(self)
             viewModel?.displayItemsRequested()
         }
     }
 
-    private var placesDisplayItems: [PlaceDisplayItem] = []
+    private var placesDisplayItems: [PlaceDisplayItem] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
             tableView.dataSource = self
-            tableView.register(UINib(nibName: "PlaceCell", bundle: nil), forCellReuseIdentifier: "PlaceCell")
-            tableView.register(UINib(nibName: "AddCell", bundle: nil), forCellReuseIdentifier: "AddCell")
+            tableView.register(UINib(nibName: CellIdentifiers.placeCell, bundle: nil), forCellReuseIdentifier: CellIdentifiers.placeCell)
+            tableView.register(UINib(nibName: CellIdentifiers.addCell, bundle: nil), forCellReuseIdentifier: CellIdentifiers.addCell)
             tableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         }
     }
@@ -59,7 +67,7 @@ extension PlacesViewController: UITableViewDelegate {
         if indexPath.row == 0 {
             viewModel?.createPlaceRequested()
         } else {
-            viewModel?.showPlaceRequested(placesDisplayItems[indexPath.row].id)
+            viewModel?.showPlaceRequested(placesDisplayItems[indexPath.row - 1].id)
         }
     }
 }
@@ -82,21 +90,16 @@ extension PlacesViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            if let cell = makeAddPlaceCell() {
-                return cell
-            }
-            return UITableViewCell()
-        } else {
-            if let cell = makePlaceCell(indexPath.row - 1) {
-                return cell
-            }
-            return UITableViewCell()
+        if indexPath.row == 0, let addCell = makeAddPlaceCell() {
+            return addCell
+        } else if let placeCell = makePlaceCell(indexPath.row - 1) {
+            return placeCell
         }
+        return UITableViewCell()
     }
 
     private func makeAddPlaceCell() -> AddCell? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddCell") as? AddCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.addCell) as? AddCell else {
             return nil
         }
 
@@ -105,7 +108,7 @@ extension PlacesViewController: UITableViewDataSource {
     }
 
     private func makePlaceCell(_ index: Int) -> PlaceCell? {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") as? PlaceCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.placeCell) as? PlaceCell else {
             return nil
         }
 
@@ -114,6 +117,4 @@ extension PlacesViewController: UITableViewDataSource {
         cell.placePreview.image = placesDisplayItems[index].photo
         return cell
     }
-
-
 }

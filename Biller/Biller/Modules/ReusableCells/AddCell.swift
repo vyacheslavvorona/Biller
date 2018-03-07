@@ -13,6 +13,4 @@ class AddCell: UITableViewCell {
     
     @IBOutlet weak var addLabel: UILabel!
     @IBOutlet weak var plusLabel: UILabel!
-    
-    
 }

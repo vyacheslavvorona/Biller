@@ -24,7 +24,7 @@ public struct PlaceDisplayItem {
             displayItem.note = comment.text
         }
 
-        if let data = place.photo {
+        if let data = place.photoPreview {
             displayItem.photo = UIImage(data: data as Data)
         }
 

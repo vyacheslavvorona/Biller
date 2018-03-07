@@ -17,7 +17,11 @@ public protocol PlacesViewControllerProtocol: class {
 
 public class PlacesViewModel: PlacesViewModelProtocol {
     
-    public weak var viewController: PlacesViewControllerProtocol?
+    private weak var viewController: PlacesViewControllerProtocol?
+
+    public func setViewController(_ viewController: PlacesViewControllerProtocol) {
+        self.viewController = viewController
+    }
 
     public func displayItemsRequested() {
         if let vc = viewController {
@@ -64,7 +68,7 @@ public class PlacesViewModel: PlacesViewModelProtocol {
         if let placeViewController = placeStoryBoard.instantiateViewController(withIdentifier: "Place") as? PlaceViewController,
             var placeViewModel = placeViewController.viewModel as? PlaceViewModelInputProtocol {
 
-                placeViewModel.placeModel = place
+            placeViewModel.setPlaceModel(place)
             viewController?.moveToViewController(placeViewController)
         }
     }
