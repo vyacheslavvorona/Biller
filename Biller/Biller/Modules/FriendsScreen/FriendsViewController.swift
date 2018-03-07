@@ -10,7 +10,7 @@ import Foundation
 import Result
 import RealmSwift
 
-public protocol FriendsViewModelProtocol {
+public protocol FriendsViewModelProtocol: class {
     
 }
 

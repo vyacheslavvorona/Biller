@@ -11,11 +11,11 @@ import Result
 import RealmSwift
 
 public enum CommentType: Int {
-    case BASIC = 0
-    case BILL = 1
-    case BILL_POSITION = 2
-    case PLACE = 3
-    case PERSON = 4
+    case basic = 0
+    case bill = 1
+    case billPosition = 2
+    case place = 3
+    case person = 4
 }
 
 public class CommentModel: BaseModel, BaseModelProtocol {
@@ -23,7 +23,7 @@ public class CommentModel: BaseModel, BaseModelProtocol {
     @objc private dynamic var type: Int = 0
     public var commentType: CommentType {
         get {
-            return CommentType.init(rawValue: self.type) ?? .BASIC
+            return CommentType.init(rawValue: self.type) ?? .basic
         }
         set {
             self.type = newValue.rawValue

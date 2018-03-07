@@ -11,7 +11,7 @@ import Result
 import RealmSwift
 
 public enum DebtType: Int {
-    case BASIC = 0
+    case basic = 0
 }
 
 public class DebtModel: BaseModel, BaseModelProtocol, CurrencyProtocol {

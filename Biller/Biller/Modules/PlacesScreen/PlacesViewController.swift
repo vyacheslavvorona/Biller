@@ -10,19 +10,24 @@ import Foundation
 import Result
 import RealmSwift
 
-public protocol PlacesViewModelProtocol {
+public protocol PlacesViewModelProtocol: class {
     var viewController: PlacesViewControllerProtocol? { get set }
-    
+
+    func displayItemsRequested()
     func createPlaceRequested()
+    func showPlaceRequested(_ placeId: String)
 }
 
 public class PlacesViewController: UIViewController, PlacesViewControllerProtocol {
+
     private var viewModel: PlacesViewModelProtocol? {
         didSet {
             viewModel?.viewController = self
+            viewModel?.displayItemsRequested()
         }
     }
-    public var placesDisplayItems: [PlaceDisplayItem] = []
+
+    private var placesDisplayItems: [PlaceDisplayItem] = []
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -40,17 +45,21 @@ public class PlacesViewController: UIViewController, PlacesViewControllerProtoco
         viewModel = PlacesViewModel()
     }
     
-    public func moveToViewController(viewController: UIViewController) {
+    public func moveToViewController(_ viewController: UIViewController) {
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    public func setDisplayItems(_ items: [PlaceDisplayItem]) {
+        self.placesDisplayItems = items
     }
 }
 
 extension PlacesViewController: UITableViewDelegate {
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row >= placesDisplayItems.count {
+        if indexPath.row == 0 {
             viewModel?.createPlaceRequested()
         } else {
-            print("skolvan missed")
+            viewModel?.showPlaceRequested(placesDisplayItems[indexPath.row].id)
         }
     }
 }
@@ -65,26 +74,46 @@ extension PlacesViewController: UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row >= placesDisplayItems.count {
+        if indexPath.row == 0 {
             return 70
-        } else if indexPath.row < placesDisplayItems.count {
-            return 160
         } else {
-            return 0
+            return 160
         }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row >= placesDisplayItems.count {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddCell") as? AddCell else {
-                return UITableViewCell()
+        if indexPath.row == 0 {
+            if let cell = makeAddPlaceCell() {
+                return cell
             }
-            return cell
+            return UITableViewCell()
         } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") as? BillCell else {
-                return UITableViewCell()
+            if let cell = makePlaceCell(indexPath.row - 1) {
+                return cell
             }
-            return cell
+            return UITableViewCell()
         }
     }
+
+    private func makeAddPlaceCell() -> AddCell? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AddCell") as? AddCell else {
+            return nil
+        }
+
+        cell.addLabel.text = "Add new Place"
+        return cell
+    }
+
+    private func makePlaceCell(_ index: Int) -> PlaceCell? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PlaceCell") as? PlaceCell else {
+            return nil
+        }
+
+        cell.titleLabel.text = placesDisplayItems[index].name
+        cell.descriptionLabel.text = placesDisplayItems[index].note
+        cell.placePreview.image = placesDisplayItems[index].photo
+        return cell
+    }
+
+
 }

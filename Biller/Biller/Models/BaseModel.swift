@@ -49,12 +49,17 @@ public extension BaseModelProtocol where Self: BaseModel {
     static func excludeSubRelationships() -> [String] { return [] }
     
     // Get an Object by its primary key value
-    static func object(realm: Realm = Realm.getRealm(), pk pkValue: Any) -> Self? {
+    static func object(_ realm: Realm = Realm.getRealm(), pk pkValue: Any) -> Self? {
         return realm.object(ofType: self, forPrimaryKey: pkValue)
+    }
+
+     // Get objects from local realm storage with specified filter conditions.
+    static func objects(_ realm: Realm = Realm.getRealm()) -> Results<Self> {
+        return realm.objects(Self.self)
     }
     
     // Create a Realm Object with given values
-    static func create(realm: Realm = Realm.getRealm(), value: Any = [:], update: Bool = false) throws -> Self {
+    static func create(_ realm: Realm = Realm.getRealm(), value: Any = [:], update: Bool = false) throws -> Self {
         return realm.create(Self.self, value: value, update: update)
     }
 }

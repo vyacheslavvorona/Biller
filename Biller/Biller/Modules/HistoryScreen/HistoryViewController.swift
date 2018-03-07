@@ -10,7 +10,7 @@ import Foundation
 import Result
 import RealmSwift
 
-public protocol HistoryViewModelProtocol {
+public protocol HistoryViewModelProtocol: class {
     var viewController: HistoryViewControllerProtocol? { get set }
 }
 

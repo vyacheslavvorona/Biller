@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-public protocol PlaceViewControllerProtocol {
+public protocol PlaceViewControllerProtocol: class {
     
 }
 
@@ -19,6 +19,6 @@ public protocol PlaceViewModelInputProtocol {
 
 public class PlaceViewModel: PlaceViewModelProtocol, PlaceViewModelInputProtocol {
     
-    public var viewController: PlaceViewControllerProtocol?
+    public weak var viewController: PlaceViewControllerProtocol?
     public var placeModel: PlaceModel?
 }

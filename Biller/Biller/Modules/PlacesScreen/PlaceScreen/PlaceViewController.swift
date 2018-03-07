@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol PlaceViewModelProtocol {
+public protocol PlaceViewModelProtocol: class {
     var viewController: PlaceViewControllerProtocol? { get set }
 }
 
@@ -20,11 +20,15 @@ public class PlaceViewController: UIViewController, PlaceViewControllerProtocol 
             viewModel?.viewController = self
         }
     }
-    
-    public override func viewDidLoad() {
-        super.viewDidLoad()
-        
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
         viewModel = PlaceViewModel()
     }
-    
+
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
 }

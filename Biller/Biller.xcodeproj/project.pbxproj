@@ -16,6 +16,7 @@
 		031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D21FA54F2900D19AD0 /* HistoryViewController.swift */; };
 		031174D51FA54F4300D19AD0 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 031174D41FA54F4300D19AD0 /* History.storyboard */; };
 		031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */; };
+		0328282A205073460030FEDE /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03282829205073460030FEDE /* Utilities.swift */; };
 		032BC4181FADFAA400E7EF59 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC4171FADFAA400E7EF59 /* PlaceCell.swift */; };
 		032BC41A1FADFAED00E7EF59 /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032BC4191FADFAED00E7EF59 /* PlaceCell.xib */; };
 		032BC41D1FADFFBE00E7EF59 /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */; };
@@ -82,6 +83,7 @@
 		031174D21FA54F2900D19AD0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		031174D41FA54F4300D19AD0 /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		031174D61FA54F8400D19AD0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		03282829205073460030FEDE /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		032BC4171FADFAA400E7EF59 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		032BC4191FADFAED00E7EF59 /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
 		032BC41C1FADFFBE00E7EF59 /* PlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 				0396FE621FA2374900ED2F13 /* Realm+Ext.swift */,
 				032D0B5F1FA595CD006DD8DD /* CurrencyProtocol.swift */,
 				032D0B731FA5F61D006DD8DD /* TopAlignedLabel.swift */,
+				03282829205073460030FEDE /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				032D0B6B1FA5E072006DD8DD /* FriendsViewModel.swift in Sources */,
 				03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */,
 				036D3FC71FA6002E009BC78D /* BillDisplayItem.swift in Sources */,
+				0328282A205073460030FEDE /* Utilities.swift in Sources */,
 				032D0B5E1FA594A8006DD8DD /* DebtModel.swift in Sources */,
 				031174D71FA54F8400D19AD0 /* HistoryViewModel.swift in Sources */,
 				031174CE1FA54D7300D19AD0 /* NavigationBarController.swift in Sources */,

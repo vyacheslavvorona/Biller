@@ -11,9 +11,9 @@ import Result
 import RealmSwift
 
 public enum MenuPositionType: Int {
-    case BASIC = 0
-    case DRINK = 1
-    case FOOD = 2
+    case basic = 0
+    case drink = 1
+    case food = 2
 }
 
 public class MenuPositionModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
@@ -21,7 +21,7 @@ public class MenuPositionModel: BaseModel, BaseModelProtocol, CurrencyProtocol {
     @objc private dynamic var type: Int = 0
     public var positionType: MenuPositionType {
         get {
-            return MenuPositionType.init(rawValue: self.type) ?? .BASIC
+            return MenuPositionType.init(rawValue: self.type) ?? .basic
         }
         set {
             self.type = newValue.rawValue
