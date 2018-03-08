@@ -20,8 +20,8 @@ public struct PlaceDisplayItem {
         displayItem.id = place.id
         displayItem.name = place.name
 
-        if let comment = place.comment {
-            displayItem.note = comment.text
+        if let comment = place.comment, let text = comment.text {
+            displayItem.note = text
         }
 
         if let data = place.photoPreview {

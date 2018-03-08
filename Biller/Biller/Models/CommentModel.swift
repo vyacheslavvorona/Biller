@@ -29,7 +29,7 @@ public class CommentModel: BaseModel, BaseModelProtocol {
             self.type = newValue.rawValue
         }
     }
-    @objc public dynamic var text: String = ""
+    @objc public dynamic var text: String?
     @objc public dynamic var owner: BaseModel?
     
     public convenience init(type: CommentType, text: String?) {

@@ -21,26 +21,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="502" height="250"/>
                         <color key="backgroundColor" red="1" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbp-IF-SAy">
-                        <rect key="frame" x="0.0" y="229" width="502" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGe-9a-bxC">
+                        <rect key="frame" x="8" y="224.5" width="486" height="17"/>
                         <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Gy9-zb-suU" firstAttribute="top" secondItem="GzD-i6-hQT" secondAttribute="top" id="0rn-Ia-E5G"/>
+                    <constraint firstAttribute="bottom" secondItem="uGe-9a-bxC" secondAttribute="bottom" constant="8" id="2Cj-uD-SyF"/>
                     <constraint firstAttribute="trailing" secondItem="Gy9-zb-suU" secondAttribute="trailing" id="CeO-bX-8zb"/>
-                    <constraint firstAttribute="bottom" secondItem="Wbp-IF-SAy" secondAttribute="bottom" id="L4t-j9-Eh7"/>
                     <constraint firstItem="Gy9-zb-suU" firstAttribute="leading" secondItem="GzD-i6-hQT" secondAttribute="leading" id="M5y-G3-ZdA"/>
-                    <constraint firstAttribute="trailing" secondItem="Wbp-IF-SAy" secondAttribute="trailing" id="Nv2-d1-amp"/>
-                    <constraint firstItem="Wbp-IF-SAy" firstAttribute="leading" secondItem="GzD-i6-hQT" secondAttribute="leading" id="WVL-M3-EUy"/>
+                    <constraint firstItem="uGe-9a-bxC" firstAttribute="leading" secondItem="GzD-i6-hQT" secondAttribute="leading" constant="8" id="XN4-Ld-Lo8"/>
+                    <constraint firstAttribute="trailing" secondItem="uGe-9a-bxC" secondAttribute="trailing" constant="8" id="sAV-gL-yqH"/>
                     <constraint firstAttribute="bottom" secondItem="Gy9-zb-suU" secondAttribute="bottom" id="sK7-Xw-Pnm"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="titleImageView" destination="Gy9-zb-suU" id="gdh-Uv-k7g"/>
-                <outlet property="titleLabel" destination="Wbp-IF-SAy" id="5Ai-nn-iPX"/>
+                <outlet property="titleTextField" destination="uGe-9a-bxC" id="cVx-X2-bEe"/>
             </connections>
             <point key="canvasLocation" x="18" y="63"/>
         </tableViewCell>

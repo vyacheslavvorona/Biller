@@ -53,6 +53,8 @@
 		0396FE631FA2374900ED2F13 /* Realm+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE621FA2374900ED2F13 /* Realm+Ext.swift */; };
 		0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE661FA23DA400ED2F13 /* BillModel.swift */; };
 		0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396FE731FA250CE00ED2F13 /* TabBarController.swift */; };
+		03A0ED2F205186970025A162 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A0ED2E205186970025A162 /* CommentCell.xib */; };
+		03A0ED31205186A60025A162 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A0ED30205186A60025A162 /* CommentCell.swift */; };
 		03C5A3952050A301003301D4 /* GoToCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5A3942050A301003301D4 /* GoToCell.swift */; };
 		03C5A3972050A30F003301D4 /* GoToCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03C5A3962050A30F003301D4 /* GoToCell.xib */; };
 		03D3A5371FA2121200FE3947 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D3A5361FA2121200FE3947 /* RLMSupport.swift */; };
@@ -132,6 +134,8 @@
 		0396FE621FA2374900ED2F13 /* Realm+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Realm+Ext.swift"; sourceTree = "<group>"; };
 		0396FE661FA23DA400ED2F13 /* BillModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillModel.swift; sourceTree = "<group>"; };
 		0396FE731FA250CE00ED2F13 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		03A0ED2E205186970025A162 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		03A0ED30205186A60025A162 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		03C5A3942050A301003301D4 /* GoToCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToCell.swift; sourceTree = "<group>"; };
 		03C5A3962050A30F003301D4 /* GoToCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoToCell.xib; sourceTree = "<group>"; };
 		03D3A5361FA2121200FE3947 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				037E41B320509DD000F12BD1 /* RatingCell.xib */,
 				03C5A3942050A301003301D4 /* GoToCell.swift */,
 				03C5A3962050A30F003301D4 /* GoToCell.xib */,
+				03A0ED30205186A60025A162 /* CommentCell.swift */,
+				03A0ED2E205186970025A162 /* CommentCell.xib */,
 			);
 			path = ReusableCells;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03A0ED2F205186970025A162 /* CommentCell.xib in Resources */,
 				036D3FC51FA5FB6C009BC78D /* AddCell.xib in Resources */,
 				032D0B6D1FA5E081006DD8DD /* Friends.storyboard in Resources */,
 				03C5A3972050A30F003301D4 /* GoToCell.xib in Resources */,
@@ -728,6 +735,7 @@
 				0396FE741FA250CE00ED2F13 /* TabBarController.swift in Sources */,
 				031174D31FA54F2900D19AD0 /* HistoryViewController.swift in Sources */,
 				032D0B741FA5F61D006DD8DD /* TopAlignedLabel.swift in Sources */,
+				03A0ED31205186A60025A162 /* CommentCell.swift in Sources */,
 				036D3FC41FA5FB6C009BC78D /* AddCell.swift in Sources */,
 				03650FE11FADF6BA00599F58 /* PlaceDisplayItem.swift in Sources */,
 				0396FE671FA23DA400ED2F13 /* BillModel.swift in Sources */,

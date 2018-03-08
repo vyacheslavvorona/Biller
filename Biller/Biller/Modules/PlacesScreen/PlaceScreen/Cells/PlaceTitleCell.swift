@@ -12,5 +12,5 @@ import UIKit
 class PlaceTitleCell: UITableViewCell {
 
     @IBOutlet weak var titleImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleTextField: UITextField!
 }

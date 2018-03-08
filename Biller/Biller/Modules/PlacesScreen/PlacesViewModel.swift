@@ -16,7 +16,9 @@ public protocol PlacesViewControllerProtocol: class {
 }
 
 public class PlacesViewModel: PlacesViewModelProtocol {
-    
+
+    public var notificationToken: NotificationToken?
+
     private weak var viewController: PlacesViewControllerProtocol?
 
     public func setViewController(_ viewController: PlacesViewControllerProtocol) {
@@ -24,13 +26,31 @@ public class PlacesViewModel: PlacesViewModelProtocol {
     }
 
     public func displayItemsRequested() {
-        if let vc = viewController {
-            vc.setDisplayItems(convertPlacesToDisplayItems(loadPlaces()))
-        }
+        observePlaces()
     }
 
-    private func loadPlaces() -> [PlaceModel] {
-        return Array(PlaceModel.objects())
+//    private func loadPlaces() -> [PlaceModel] { //add a way to filter places later?
+//        return Array(PlaceModel.objects())
+//    }
+
+    private func observePlaces() {
+        notificationToken = PlaceModel.objects().observe { [weak self] placesChanges in
+            guard let this = self else { return }
+
+            switch placesChanges {
+            case .initial(let places):
+                if let vc = this.viewController {
+                    vc.setDisplayItems(this.convertPlacesToDisplayItems(Array(places)))
+                }
+            case .update(let places, _, _, _):
+                if let vc = this.viewController {
+                    vc.setDisplayItems(this.convertPlacesToDisplayItems(Array(places)))
+                }
+            case .error(let error):
+                print("Error during observing Places list changes: \(error)")
+            default: break
+            }
+        }
     }
 
     private func convertPlacesToDisplayItems(_ places: [PlaceModel]) -> [PlaceDisplayItem] {
@@ -44,7 +64,7 @@ public class PlacesViewModel: PlacesViewModelProtocol {
             let realm = try Realm()
             try realm.write {
                 let newPlace = try PlaceModel.create(realm, value: PlaceModel(type: .basic), update: false)
-                self.newPlaceCreated(place: newPlace)
+                self.newPlaceCreated(newPlace)
             }
         } catch {
             print("Could not create a new place model due to Error: \(error)")
@@ -53,22 +73,23 @@ public class PlacesViewModel: PlacesViewModelProtocol {
 
     public func showPlaceRequested(_ placeId: String) {
         if let place = PlaceModel.object(pk: placeId) {
-            openPlaceScreen(place: place)
+            openPlaceScreen(place)
         } else {
             print("Place with id \(placeId) was not found in Realm")
         }
     }
     
-    private func newPlaceCreated(place: PlaceModel) {
-        openPlaceScreen(place: place)
+    private func newPlaceCreated(_ place: PlaceModel) {
+        openPlaceScreen(place, placeEditable: true)
     }
     
-    private func openPlaceScreen(place: PlaceModel) {
+    private func openPlaceScreen(_ place: PlaceModel, placeEditable: Bool = false) {
         let placeStoryBoard = UIStoryboard(name: "Place", bundle: nil)
         if let placeViewController = placeStoryBoard.instantiateViewController(withIdentifier: "Place") as? PlaceViewController,
-            var placeViewModel = placeViewController.viewModel as? PlaceViewModelInputProtocol {
+            let placeViewModel = placeViewController.viewModel as? PlaceViewModelInputProtocol {
 
             placeViewModel.setPlaceModel(place)
+            placeViewModel.setIsPlaceEditable(placeEditable)
             viewController?.moveToViewController(placeViewController)
         }
     }
