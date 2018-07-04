@@ -10,9 +10,13 @@ import Foundation
 import UIKit
 
 public protocol PlaceViewModelProtocol: class {
+    var isPlaceEditable: Bool { get }
+
     func setViewController(_ viewController: PlaceViewControllerProtocol)
     func placeModelRequested()
     func updateCommentRequested(_ newCommentText: String)
+    func updateNameRequested(_ newName: String)
+    func isEditableChangeRequested()
 }
 
 fileprivate struct CellIdentifiers {
@@ -31,9 +35,8 @@ fileprivate enum CellIndexes: Int {
 
 public class PlaceViewController: UIViewController, PlaceViewControllerProtocol {
 
-    private var isEditable: Bool = false
-    public func setIsEditable(_ isEditable: Bool) {
-        self.isEditable = isEditable
+    public func isEditableHasChanged(_ isEditable: Bool?) {
+        tableView.reloadData()
     }
 
     private var placeName: String? {
@@ -97,16 +100,26 @@ public class PlaceViewController: UIViewController, PlaceViewControllerProtocol 
     public override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel?.setViewController(self)
-        viewModel?.placeModelRequested()
-
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(textViewEndEditing(_ :)))
         gestureRecognizer.delegate = self
         self.tableView.addGestureRecognizer(gestureRecognizer)
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(isEditableChangeRequested))
+    }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        viewModel?.setViewController(self)
+        viewModel?.placeModelRequested()
     }
 
     @objc func textViewEndEditing(_ recognizer: UITapGestureRecognizer) {
         tableView.endEditing(true)
+    }
+
+    @objc func isEditableChangeRequested() {
+        viewModel?.isEditableChangeRequested()
     }
 }
 
@@ -151,6 +164,7 @@ extension PlaceViewController: UITableViewDataSource {
             let commentCell = makeCommentCell() {
             return commentCell
         }
+
         return UITableViewCell()
     }
 
@@ -159,9 +173,15 @@ extension PlaceViewController: UITableViewDataSource {
             return nil
         }
 
+        if let vm = viewModel {
+            cell.titleTextField.isEnabled = vm.isPlaceEditable
+        }
+
+        cell.titleTextField.delegate = self
+
         cell.titleTextField.text = placeName
-        cell.titleTextField.isEnabled = isEditable
         cell.titleImageView.image = photo
+
         return cell
     }
 
@@ -187,8 +207,11 @@ extension PlaceViewController: UITableViewDataSource {
             return nil
         }
 
+        if let vm = viewModel {
+            cell.commentTextView.isEditable = vm.isPlaceEditable
+        }
+
         cell.commentTextView.delegate = self
-//        cell.commentTextView.isEditable = isEditable
         if let commentText = comment {
             cell.commentTextView.text = commentText
             cell.commentTextView.textColor = UIColor.black
@@ -196,7 +219,17 @@ extension PlaceViewController: UITableViewDataSource {
             cell.commentTextView.text = "Enter a comment for this Place..."
             cell.commentTextView.textColor = UIColor.lightGray
         }
+
         return cell
+    }
+}
+
+extension PlaceViewController: UITextFieldDelegate {
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField.text!.isEmpty {
+            textField.text = "Yet another place"
+        }
+        viewModel?.updateNameRequested(textField.text!)
     }
 }
 
@@ -206,7 +239,6 @@ extension PlaceViewController: UITextViewDelegate {
             textView.text = nil
             textView.textColor = UIColor.black
         }
-
     }
 
     public func textViewDidEndEditing(_ textView: UITextView) {

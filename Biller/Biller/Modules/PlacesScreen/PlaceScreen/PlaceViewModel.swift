@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 public protocol PlaceViewControllerProtocol: class {
-    func setIsEditable(_ isEditable: Bool)
+    func isEditableHasChanged(_ isEditable: Bool?)
     func setPlaceName(_ placeName: String)
     func setPhoto(_ photo: UIImage)
     func setRating(_ rating: Int)
@@ -26,11 +26,11 @@ public class PlaceViewModel: PlaceViewModelProtocol, PlaceViewModelInputProtocol
 
     public var notificationToken: NotificationToken?
 
-    private var isPlaceEditable: Bool = false
+    public var isPlaceEditable: Bool = false
     public func setIsPlaceEditable(_ isEditable: Bool) {
         isPlaceEditable = isEditable
         if let vc = viewController {
-            vc.setIsEditable(isPlaceEditable)
+            vc.isEditableHasChanged(nil)
         }
     }
     
@@ -65,9 +65,29 @@ public class PlaceViewModel: PlaceViewModelProtocol, PlaceViewModelInputProtocol
         }
     }
 
+    public func updateNameRequested(_ newName: String) {
+        let realm = Realm.getRealm()
+        do {
+            try realm.write {
+                if let place = placeModel {
+                    place.name = newName
+                } else {
+                    print("No place found")
+                }
+            }
+        } catch {
+            if let place = placeModel {
+                print("Error while updating comment for Place \(place.id)): \(error)")
+            }
+        }
+    }
+
+    public func isEditableChangeRequested() {
+        setIsPlaceEditable(!isPlaceEditable)
+    }
+
     private func setPlaceInitials() {
         if let vc = viewController, let place = placeModel {
-            vc.setIsEditable(isPlaceEditable)
             vc.setPlaceName(place.name)
             vc.setRating(place.rating)
 

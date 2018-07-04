@@ -21,12 +21,21 @@ public class PlacesViewModel: PlacesViewModelProtocol {
 
     private weak var viewController: PlacesViewControllerProtocol?
 
+    public var placeViewController: PlaceViewController?
+
     public func setViewController(_ viewController: PlacesViewControllerProtocol) {
         self.viewController = viewController
     }
 
     public func displayItemsRequested() {
         observePlaces()
+
+        let placeStoryBoard = UIStoryboard(name: "Place", bundle: nil)
+        if let placeVC = placeStoryBoard.instantiateViewController(withIdentifier: "Place") as? PlaceViewController {
+            placeViewController = placeVC
+        } else {
+            print("can not instantiate ViewController with identifier: Place")
+        }
     }
 
 //    private func loadPlaces() -> [PlaceModel] { //add a way to filter places later?
@@ -84,13 +93,12 @@ public class PlacesViewModel: PlacesViewModelProtocol {
     }
     
     private func openPlaceScreen(_ place: PlaceModel, placeEditable: Bool = false) {
-        let placeStoryBoard = UIStoryboard(name: "Place", bundle: nil)
-        if let placeViewController = placeStoryBoard.instantiateViewController(withIdentifier: "Place") as? PlaceViewController,
-            let placeViewModel = placeViewController.viewModel as? PlaceViewModelInputProtocol {
+        if let placeVC = self.placeViewController,
+             let placeViewModel = placeVC.viewModel as? PlaceViewModelInputProtocol {
 
             placeViewModel.setPlaceModel(place)
             placeViewModel.setIsPlaceEditable(placeEditable)
-            viewController?.moveToViewController(placeViewController)
+            viewController?.moveToViewController(placeVC)
         }
     }
 }
